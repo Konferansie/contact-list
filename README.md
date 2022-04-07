@@ -1,7 +1,7 @@
-# Install dependencies and packages in root directory
+Install dependencies and packages in root directory
 ### `npm install'
 
-# Run project
+Run project
 ### `npm start`
 
 #Runs the app in the development mode.
