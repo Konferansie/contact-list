@@ -1,38 +1,94 @@
+
 .App {
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    height: 94vh;
+    width: 100%;
+    margin: 3vh auto;
+    padding: 15px;
+    background: #c7def1;
+    border: 2px solid #c7def1;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App input {
+    height: 32px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #6aa8db;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App input:focus {
+    outline: aquamarine;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .search-sort {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-edit {
+    background: #fff url("img/btn-edit.png") no-repeat center;
+    background-size: 15px;
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s;
+    border: 2px solid #6aa8db;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn-filter {
+    background: #fff url("img/btn-filter.png") no-repeat center;
+    background-size: 15px;
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: all 0.3s;
+    border: 2px solid #6aa8db;
+    box-sizing: border-box;
 }
+
+.btn-filter:hover {
+    background: #c2c5e9 url("img/btn-filter.png") no-repeat center;
+    background-size: 15px;
+}
+
+.App button {
+    outline: none;
+    box-sizing: border-box;
+    height: 32px;
+    border-radius: 5px;
+    padding: 6px 20px;
+    line-height: 1;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.App button.btn-blue {
+    background: #6c7ce9;
+}
+
+.App button.btn-red {
+    background: #d34040;
+}
+
+.App button.btn-green {
+    background: #5ba95b;
+}
+
+.App .contacts-total {
+    font-weight: bold;
+    text-align: center;
+    padding: 6px 12px;
+    background: #a6e0f1;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+

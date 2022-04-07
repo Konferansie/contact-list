@@ -1,0 +1,19 @@
+.user-exist {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border-radius: 5px;
+    padding: 10px;
+    top: 122px;
+    left:50%;
+    transform: translate(-50%,0);
+    max-width: calc(600px - 30px);
+    width: 100%;
+    background: #fa4a47;
+    color: #fff;
+    transition: all 2s ease-out;
+    z-index: 99;
+    box-sizing: border-box;
+
+}

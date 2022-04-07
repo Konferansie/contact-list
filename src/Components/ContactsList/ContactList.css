@@ -1,0 +1,36 @@
+.contact-list {
+    width: 100%;
+    max-height: calc(100vh - 220px);
+    overflow: auto;
+    display: block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.contact-list::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.contact-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.contact-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 10px 0;
+    border-bottom: 1px solid #000;
+}
+
+.contact-list .contact-info  .name {
+    font-weight: bold;
+}
+
+
+
