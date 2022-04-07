@@ -1,10 +1,10 @@
 import React from 'react';
 import './UserExistMessage.css'
 
-const UserExistMessage = () => {
+const UserExistMessage = ({name}) => {
     return (
         <div className="user-exist">
-            User Exist
+           Contact with name: <span style={{fontWeight:"bold", margin:'0 5px'}}> { name } </span> exist
         </div>
     );
 };

@@ -16,6 +16,10 @@ function App() {
     const [searchContact, setSearchContact] = useState('');
     const [showModal, setShowModal] = useState(false);
 
+    //Add Contact Form
+    const [contactName, setContactName] = useState('')
+    const [contactPhoneNumber, setContactPhoneNumber] = useState('')
+
     //State for Edit Modal
     const [editableName, setEditableName] = useState('');
     const [editablePhone, setEditablePhone] = useState('');
@@ -45,12 +49,19 @@ function App() {
 
     //User Exist Message
     const userExistMessage = () => {
-        return isExist && <UserExistMessage/>
+        return isExist && <UserExistMessage name={contactName}/>
     }
 
     //Check Contact form Feeling
     const addFormFeeling = () => {
         return isEmpty && <AddFormFeeling/>
+    }
+
+    const addContactNameHandler = (name) => {
+        setContactName(name)
+    }
+    const addContactPhoneHandler = (phone) => {
+        setContactPhoneNumber(phone)
     }
 
     //Add New Contact
@@ -82,26 +93,29 @@ function App() {
 
                 //Add to State
                 localStorage.setItem('contacts', JSON.stringify(contactsCopy));
-                setContacts(contactsCopy)
+                setContacts(contactsCopy);
+                setContactName('');
+                setContactPhoneNumber('');
             } else {
                 setIsExist(true);
-                setTimeout(() => setIsExist(false), 4000)
+                setTimeout(() => (setIsExist(false), setContactName(''), setContactPhoneNumber('')), 2000)
+
             }
         } else {
             setIsEmpty(true);
-            setTimeout(() => setIsEmpty(false), 4000)
+            setTimeout(() => setIsEmpty(false), 2000)
         }
     }
 
     //Delete contact from localStorage and state
     const deleteContact = (id) => {
-            const items = JSON.parse(localStorage.getItem('contacts'));
-            const filteredArr = items.filter(item => item.id !== id);
-            localStorage.setItem('contacts', JSON.stringify(filteredArr));
-            setContacts(filteredArr);
-            modalClose()
+        const items = JSON.parse(localStorage.getItem('contacts'));
+        const filteredArr = items.filter(item => item.id !== id);
+        localStorage.setItem('contacts', JSON.stringify(filteredArr));
+        setContacts(filteredArr);
+        modalClose()
 
-        }
+    }
 
     //Search Input handler
     const handleSearchChange = (searchValue) => {
@@ -195,7 +209,14 @@ function App() {
             {addFormFeeling()}
             <div className="contacts-total">Total Contacts: {filtered.length}</div>
 
-            <AddContact addContact={addContact}/>
+            <AddContact addContact={addContact}
+                        name={contactName}
+                        phone={contactPhoneNumber}
+                        addContactName={addContactNameHandler}
+                        addContactPhone={addContactPhoneHandler}
+
+            />
+
             <div className="search-sort">
                 <SearchForm changeSearch={handleSearchChange} searchContact={searchContact}/>
                 <div className="btn-filter" onClick={() => sortContacts()}/>
