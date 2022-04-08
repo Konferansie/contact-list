@@ -1,4 +1,4 @@
-.ediModal {
+.contact--edit-modal {
     display: none;
     background: aqua;
     padding: 50px;
@@ -13,12 +13,12 @@
 
 }
 
-.ediModal.open {
+.contact--edit-modal.open {
     display: flex;
     transition: all 1s;
 }
 
-.ediModal .inner {
+.contact--edit-modal .inner {
     background: #fff;
     max-width: 500px;
     width: 90%;
@@ -31,22 +31,21 @@
     transition: all 1s;
 }
 
-.ediModal.open .inner {
+.contact--edit-modal.open .inner {
     transform: rotateX(0deg) rotateY(0deg);
     transform-style: preserve-3d;
     transition: all 1s;
 }
 
-
-.ediModal .btn-group {
+.contact--edit-modal .btn-group {
     display: flex;
 }
 
-.ediModal .btn-group button {
+.contact--edit-modal .btn-group .btn {
     flex: 1;
 }
 
-.ediModal .btn-group button:nth-child(2) {
+.contact--edit-modal .btn-group button:nth-child(2) {
     margin: 0 10px;
 }
 

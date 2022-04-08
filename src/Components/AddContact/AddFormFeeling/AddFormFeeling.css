@@ -6,8 +6,8 @@
     border-radius: 5px;
     padding: 10px;
     top: 122px;
-    left:50%;
-    transform: translate(-50%,0);
+    left: 50%;
+    transform: translate(-50%, 0);
     max-width: calc(600px - 30px);
     width: 100%;
     background: #fa4a47;

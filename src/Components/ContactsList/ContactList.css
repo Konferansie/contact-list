@@ -15,11 +15,11 @@
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .contact-list {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    /*scrollbar-width: none; !* Firefox *!*/
 }
 
-.contact-list li {
+.contact-list .contact-list--item {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +28,7 @@
     border-bottom: 1px solid #000;
 }
 
-.contact-list .contact-info  .name {
+.contact-list .contact-info .name {
     font-weight: bold;
 }
 
